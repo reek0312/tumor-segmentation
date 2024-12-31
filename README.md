@@ -29,6 +29,7 @@ Two ways to use TumorTracer:
 1. Clone the repository:
    ```bash
    git clone https://github.com/reek0312/tumor-segmentation.git
+   cd tumor-segmentation
 
 2. Install dependencies:
    ```bash
