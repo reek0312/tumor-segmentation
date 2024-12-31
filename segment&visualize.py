@@ -12,7 +12,16 @@ def load_model(model_path):
         in_channels=1,
         classes=1,
     )
-    model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+
+    # Load the state dict and remove the "module." prefix which occured during training(used "DataParallel" to use 2 GPUs)
+    state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+    new_state_dict = {}
+    for k, v in state_dict.items():
+        name = k.replace("module.", "") if k.startswith("module.") else k
+        new_state_dict[name] = v
+    
+    # Load the modified state dict
+    model.load_state_dict(new_state_dict)
     model.eval()
     return model
 
@@ -54,4 +63,4 @@ def segment_and_visualize(model, image_path):
 # Example usage
 # model = load_model("tumor_segmentation_model.pth")
 # img_path = "path/to/your/image.png"
-# segment_and_visualize(model, "img_path")
+# segment_and_visualize(model, img_path)
