@@ -4,6 +4,8 @@ import cv2
 import numpy as np
 import segmentation_models_pytorch as smp
 
+st.set_page_config(page_title="TumorTracer")
+
 def load_model(model_path):
     model = smp.DeepLabV3Plus(
         encoder_name="resnet34",
