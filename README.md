@@ -20,7 +20,7 @@ Two ways to use TumorTracer:
 
 ### 1. Website
 
-[https://tumortracer.streamlit.app/](TumorTracer)
+[TumorTracer](https://tumortracer.streamlit.app/)
 
 ### 2. Model
 
