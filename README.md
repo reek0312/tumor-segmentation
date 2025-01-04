@@ -40,4 +40,4 @@ Two ways to use TumorTracer:
 ---
 
 
-***P.S.*** While not intended for real-world diagnosis, the model demonstrates the potential of deep learning in assisting radiologists with initial tumor detection and analysis.
+***P.S.*** While not intended for real-world diagnosis, the model demonstrates the potential of deep learning in assisting radiologists with initial tumor detection and analysis. This project is not yet perfect and currently detects only certain types of tumors/MRIs. I am working on improving it, though my available time is limited.
